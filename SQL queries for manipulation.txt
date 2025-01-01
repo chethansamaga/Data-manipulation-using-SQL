@@ -1,0 +1,18 @@
+-- Total quantity of each product sold:
+
+SELECT ProductID, SUM(Quantity) AS TotalQuantitySold
+FROM sales
+GROUP BY ProductID;
+
+-- Number of orders per day:
+
+SELECT OrderDate, COUNT(OrderID) AS NumberOfOrders
+FROM sales
+GROUP BY OrderDate;
+
+-- Customers who placed more than one order:
+
+SELECT CustomerID
+FROM sales
+GROUP BY CustomerID
+HAVING COUNT(OrderID) > 1;

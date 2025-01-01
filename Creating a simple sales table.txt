@@ -1,0 +1,16 @@
+-- Create the sales table
+CREATE TABLE sales (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    ProductID VARCHAR(20),
+    Quantity INT,
+    OrderDate DATE
+);
+
+-- Insert sample data
+INSERT INTO sales (OrderID, CustomerID, ProductID, Quantity, OrderDate) VALUES
+(1, 101, 'A123', 2, '2024-01-15'),
+(2, 102, 'B456', 1, '2024-01-15'),
+(3, 101, 'C789', 3, '2024-01-16'),
+(4, 103, 'A123', 1, '2024-01-17'),
+(5, 102, 'A123', 2, '2024-01-18');
